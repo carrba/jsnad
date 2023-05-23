@@ -15,11 +15,11 @@ function printer(val){
 const allfiles = fs.readdirSync('.')
 allfiles.forEach((val) => printer(val))
 
-const myJson = {files: myArray}
+myObj = {files: myArray}
 
-const mj = JSON.stringify(myJson)
+const myJson = JSON.stringify(myObj)
 
 console.log("#####")
-console.log(mj)
+console.log(myJson)
 
-fs.writeFileSync('list.txt', mj, 'utf8')
+fs.writeFileSync('list.txt', myJson, 'utf8')
